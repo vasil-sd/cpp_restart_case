@@ -19,7 +19,7 @@ int fn(int* arr, int sz, RC rc) {
         if(val == 0) val = rc(e2{}, arr, i);
         accum *= val;
     }
-    // here we fault into default case
+    // here we fall into default case
     int j = rc(e3{}, arr, i);
     return accum;
 }
