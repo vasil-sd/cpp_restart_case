@@ -29,7 +29,7 @@ languages (Common List restart-case).
             case2, std::function<double(short, int>
         >;
         
-        // default restart_case_signature just rises exceptions
+        // default restart_case_signature just raises exceptions
         
         int my_func(data* some_data, const restart_case_sig& rc = restart_case_sig{})
         {
@@ -38,9 +38,9 @@ languages (Common List restart-case).
     
   * Implement an algebra over restart_cases:
   
-    rc3 = rc1 + rc2
-    rc2 = rc1 - std::tuple<case1, case2>
-    rc2 = rc1 * std::tuple<case1, case2>
+        rc3 = rc1 + rc2
+        rc2 = rc1 - std::tuple<case1, case2>
+        rc2 = rc1 * std::tuple<case1, case2>
     
     it is needed for specialisation of handlers through call stack, when mor abstract top-level
     handlers are extended and passed down to lowe-level functions.
