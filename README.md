@@ -1,13 +1,13 @@
 # C++ simple implementation of RESTART_CASE like functionality from CommonLisp
 
-Common Lisp exception handling is more advanced then in C++,
+Common Lisp exception handling is more advanced than in C++,
 it allows not only catch and handle exceptions in top-level code,
-but to take some desisions at lower-level and to continue work of
-lower-level code.
+but to take some decisions at lower-level and to continue work of
+lower-level code from the point of exception.
 
-Imagine situation when at low level a json parser works and stucks at incorrect number
+Imagine situation when at low level a json parser stucks at incorrect number
 (there is a letter between digits, for instance).
-It cannot decide, important this number or not for high-level code. If it will throw an
+It cannot decide, important this number for high-level code or not. If it will throw an
 exception, whole parsing process will be cancelled.
 But with restart-case functionality, high-level code might decide to ignore error, replace
 wrong-parsed number by default value and continue parsing.
